@@ -12,9 +12,22 @@ namespace Instancia_de_objetos
         {
             Rueda miRueda;
             Auto miAuto;
-            
+            Auto miAuto2;
+            Auto miAuto3;
+            Auto miAuto4;
+            eFabricante fabricante;
+
+            //Auto.CanrtidaDeInstancias = 0;
+
             miRueda = new Rueda();
             miAuto = new Auto();
+            miAuto2 = new Auto();
+            miAuto3 = new Auto();
+            miAuto4 = new Auto();
+
+            fabricante = (eFabricante)0;
+
+
         }
     }
 }
