@@ -25,8 +25,16 @@ namespace Instancia_de_objetos
         Rueda di;
         Rueda ti;
         Rueda td;
-         static int CanrtidaDeInstancias;
-         eFabricante fabricante;
+        public static Random numero;
+        static int CanrtidaDeInstancias;
+        private eFabricante fabricante;
+        
+        /* 
+         * Los atributos privados son accesibles para su escritura (asignarle un valor) a traves de los constructores publicos y los metodos publicos.
+         * Pueden ser accedidos para lectura (devolver el valor del dato) a traves de metodos publicos.
+         * En este lenguaje tambien se los puede acceder para lexctura y escritura a traves de las propiedades.
+         */
+        private int kilometrosRecoridos;
 
         /* Constructores de clase. 
          * Tienen el mismo nombre que la clase
@@ -44,8 +52,11 @@ namespace Instancia_de_objetos
             this.di = new Rueda();
             this.ti = new Rueda();
             this.td = new Rueda();
+            
+            //this.fabricante = (eFabricante)0;
+            
+            this.fabricante = (eFabricante)numero.Next(0 , 2);
             Auto.CanrtidaDeInstancias++;
-            this.fabricante = (eFabricante)0;
         }
 
         /*
@@ -55,8 +66,36 @@ namespace Instancia_de_objetos
          */
         static Auto()
         {
-            Auto.CanrtidaDeInstancias = 0;
+            //Auto.CanrtidaDeInstancias = 0;
+            numero = new Random();
         }
-        
+
+        public void agregarKilometros (int kilometros)
+        {
+            this.kilometrosRecoridos += kilometros;
+            
+        }
+
+        public void volverACero()
+        {
+            this.kilometrosRecoridos = 0;
+        }
+
+        public int getKMS()
+        {
+            return this.kilometrosRecoridos;
+        }
+
+        public void mostrarAuto()
+        { 
+            Console.WriteLine(this.fabricante);
+            Console.WriteLine(this.kilometrosRecoridos);
+
+            this.dd.mostrarRueda();
+            this.di.mostrarRueda();
+            this.ti.mostrarRueda();
+            this.td.mostrarRueda();
+        }
+
     }
 }
