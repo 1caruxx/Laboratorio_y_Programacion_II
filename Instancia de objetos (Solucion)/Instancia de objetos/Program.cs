@@ -18,6 +18,10 @@ namespace Instancia_de_objetos
             Auto miAuto2;
             Auto miAuto3;
             Auto miAuto4;
+            kilometro kilometro1;
+            kilometro kilometro2;
+            kilometro kilometroAuxiliar;
+
 
             //eFabricante fabricante;
 
@@ -34,6 +38,15 @@ namespace Instancia_de_objetos
             miAuto4 = new Auto();
 
             //fabricante = (eFabricante)0;
+
+            kilometro1 = new kilometro(10);
+            kilometro2 = new kilometro(5);
+          
+
+            kilometroAuxiliar = kilometro.sumar(kilometro1 , kilometro2);
+            kilometroAuxiliar = kilometro1 + kilometro2;
+            int dato = kilometro1 + 33;
+
 
             
         }

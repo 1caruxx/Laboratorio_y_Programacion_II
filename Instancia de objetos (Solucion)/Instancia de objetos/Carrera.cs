@@ -53,8 +53,6 @@ namespace Instancia_de_objetos
             }
 
             /*Terminar con if y elses*/
-
-
         }
 
     }

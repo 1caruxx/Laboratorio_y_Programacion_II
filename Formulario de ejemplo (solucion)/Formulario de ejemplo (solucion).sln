@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Formulario de ejemplo", "Formulario de ejemplo\Formulario de ejemplo.csproj", "{DFBF3E4C-EA62-435E-BCBD-700F56BC62D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "biblioteca", "biblioteca\biblioteca.csproj", "{FCB27C08-5E2C-4FEC-B989-70A85495D561}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DFBF3E4C-EA62-435E-BCBD-700F56BC62D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFBF3E4C-EA62-435E-BCBD-700F56BC62D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFBF3E4C-EA62-435E-BCBD-700F56BC62D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFBF3E4C-EA62-435E-BCBD-700F56BC62D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCB27C08-5E2C-4FEC-B989-70A85495D561}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCB27C08-5E2C-4FEC-B989-70A85495D561}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCB27C08-5E2C-4FEC-B989-70A85495D561}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCB27C08-5E2C-4FEC-B989-70A85495D561}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
