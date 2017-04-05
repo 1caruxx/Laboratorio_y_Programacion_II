@@ -21,7 +21,10 @@ namespace Instancia_de_objetos
             kilometro kilometro1;
             kilometro kilometro2;
             kilometro kilometroAuxiliar;
-
+            int numero;
+            kilometro k1;
+            kilometro k2;
+            Metro miMetro;
 
             //eFabricante fabricante;
 
@@ -39,16 +42,22 @@ namespace Instancia_de_objetos
 
             //fabricante = (eFabricante)0;
 
-            kilometro1 = new kilometro(10);
-            kilometro2 = new kilometro(5);
-          
+            /*kilometro1 = new kilometro(10);
+            kilometro2 = new kilometro(5);*/
+
+            kilometro1 = 10;
+            kilometro2 = 5;
 
             kilometroAuxiliar = kilometro.sumar(kilometro1 , kilometro2);
             kilometroAuxiliar = kilometro1 + kilometro2;
             int dato = kilometro1 + 33;
 
+            numero = (int)3.5;
 
-            
+            k1 = (kilometro) 33;
+            k2 = 66;
+            numero = k2;
+            miMetro = k2;
         }
     }
 }
