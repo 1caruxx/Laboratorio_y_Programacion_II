@@ -28,6 +28,7 @@ namespace Instancia_de_objetos
         public static Random numero;
         static int CanrtidaDeInstancias;
         private eFabricante fabricante;
+        private tiempo tiempoDemorado;
         
         /* 
          * Los atributos privados son accesibles para su escritura (asignarle un valor) a traves de los constructores publicos y los metodos publicos.
@@ -95,6 +96,11 @@ namespace Instancia_de_objetos
             this.di.mostrarRueda();
             this.ti.mostrarRueda();
             this.td.mostrarRueda();
+        }
+
+        public void volverTiempoACero()
+        {
+            this.tiempoDemorado.cantidad = 0;
         }
 
     }
