@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Instancia_de_objetos
+namespace Objetos_y_constructores
 {
-    class tiempo
+    public class Tiempo
     {
         public int cantidad;
 
-        public tiempo(int cantidad)
+        public Tiempo(int cantidad)
         {
             this.cantidad = cantidad;
         }

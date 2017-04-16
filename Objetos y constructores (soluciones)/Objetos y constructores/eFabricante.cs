@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Instancia_de_objetos
+namespace Objetos_y_constructores
 {
     enum eFabricante
     {
-        ford,
-        chevrolet,
-        honda
+        Ford,
+        Chevrolet,
+        Honda
     }
 }
