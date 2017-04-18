@@ -5,16 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 using Entidades;
 
+
 namespace ConsolaArray
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Aula miAula;
+            Aula miAula=new Aula();
             int contador;
-
-            miAula = new Aula();
 
             for (contador = 0; contador < 12; contador++)
             { 

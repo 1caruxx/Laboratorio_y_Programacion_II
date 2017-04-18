@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DA2140CE-266A-41F1-9FAF-D40C6356217B}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{BE99FFC4-393D-4C7E-B79D-9DF2C3C98A03}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ConsolaArray</RootNamespace>
-    <AssemblyName>ConsolaArray</AssemblyName>
+    <RootNamespace>Propiedades</RootNamespace>
+    <AssemblyName>Propiedades</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -41,24 +39,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Aula.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Ejemplos de arrays\Ejemplos de arrays.csproj">
-      <Project>{cd12aa7c-cfb6-477b-a9cf-ceae9f8bc82a}</Project>
-      <Name>Ejemplos de arrays</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Entidades\Entidades.csproj">
       <Project>{28cdad54-6699-4579-b34b-9bc9a2ceaeb2}</Project>
       <Name>Entidades</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Propiedades\Propiedades.csproj">
-      <Project>{be99ffc4-393d-4c7e-b79d-9df2c3c98a03}</Project>
-      <Name>Propiedades</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

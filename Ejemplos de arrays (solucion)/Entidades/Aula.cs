@@ -55,7 +55,7 @@ namespace Entidades
 
              for (int i = 0; i < 10; i++)
              {
-                 if (this.misAlumnos[i]!=null && alumno == this.misAlumnos.GetValue(i))
+                 if (alumno == this.misAlumnos[i])
                  {
                      retorno = i;
                      break;
@@ -88,6 +88,5 @@ namespace Entidades
 
              return retorno;
          }
-
     }
 }

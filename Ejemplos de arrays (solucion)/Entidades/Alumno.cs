@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Entidades
 {
     public class Alumno
@@ -29,11 +30,34 @@ namespace Entidades
             {
                 return false;
             }
+
+           // return (alumno.apellido == alumno2.apellido && alumno.legajo == alumno2.legajo);
+        }
+
+        public static bool operator ==(Alumno alumno, int legajo)
+        {
+            if (alumno.legajo == legajo)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            
+        }
+
+        public static bool operator !=(Alumno alumno, int legajo)
+        {
+            return !(alumno == legajo);
         }
 
         public static bool operator !=(Alumno alumno, Alumno alumno2)
         { 
             return !(alumno==alumno2);
         }
+
+
+
     }
 }

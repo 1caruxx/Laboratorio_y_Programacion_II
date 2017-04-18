@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DA2140CE-266A-41F1-9FAF-D40C6356217B}</ProjectGuid>
+    <ProjectGuid>{517DFB53-E0BA-4543-9B6E-67CC3CFD7279}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ConsolaArray</RootNamespace>
-    <AssemblyName>ConsolaArray</AssemblyName>
+    <RootNamespace>Consola_de_propiedades</RootNamespace>
+    <AssemblyName>Consola de propiedades</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -48,14 +48,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Ejemplos de arrays\Ejemplos de arrays.csproj">
-      <Project>{cd12aa7c-cfb6-477b-a9cf-ceae9f8bc82a}</Project>
-      <Name>Ejemplos de arrays</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Entidades\Entidades.csproj">
-      <Project>{28cdad54-6699-4579-b34b-9bc9a2ceaeb2}</Project>
-      <Name>Entidades</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Propiedades\Propiedades.csproj">
       <Project>{be99ffc4-393d-4c7e-b79d-9df2c3c98a03}</Project>
       <Name>Propiedades</Name>
