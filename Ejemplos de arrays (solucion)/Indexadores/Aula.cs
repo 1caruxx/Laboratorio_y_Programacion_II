@@ -24,7 +24,17 @@ namespace Indexadores
         public Alumno this[int indice]
         {
             get { return this._listadoDeAlumnos[indice]; }
-            set { }
+            set 
+            {
+                if (indice < this._listadoDeAlumnos.Count)
+                {
+                    this._listadoDeAlumnos.Add(value);
+                }
+                else
+                {
+                    this._listadoDeAlumnos[indice] = value; 
+                }
+            }
 
         }
     }
