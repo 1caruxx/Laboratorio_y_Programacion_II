@@ -7,10 +7,7 @@ namespace conHerencia
 {
     public class AlumnoEgresado:Alumno
     {
-
-      
         private DateTime _fechaEgreso;
-
 
         public AlumnoEgresado(int dni, string legajo, DateTime fechaEgreso):base(dni,legajo)
         {
@@ -18,7 +15,6 @@ namespace conHerencia
 
         }
 
-       
         public override string ToString()
         {
             StringBuilder Bloque = new StringBuilder();
@@ -30,6 +26,23 @@ namespace conHerencia
 
         }
 
-       
+        public static bool operator ==(AlumnoEgresado alumno, AlumnoEgresado alumno2)
+        {
+            if (alumno._dni == alumno2._dni && alumno._legajo == alumno2._legajo && alumno._fechaEgreso == alumno2._fechaEgreso)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public static bool operator !=(AlumnoEgresado alumno, AlumnoEgresado alumno2)
+        {
+            return !(alumno == alumno2);
+        }
+
+        public override bool Equals(object obj)
+        {
+            return (obj is AlumnoEgresado);
+        }
     }
 }

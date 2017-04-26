@@ -36,5 +36,20 @@ namespace conHerencia
         {           
             Console.Write(this.ToString());
         }
+
+        public static bool operator ==(Persona persona, Persona persona2)
+        {
+            if (persona._dni == persona2._dni)
+            {
+                return true;
+            }
+           
+            return false;
+        }
+
+        public static bool operator !=(Persona persona, Persona persona2)
+        {
+            return !(persona == persona2);
+        }
     }
 }

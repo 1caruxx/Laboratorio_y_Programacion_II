@@ -24,5 +24,24 @@ namespace conHerencia
 
             return Bloque.ToString();
         }
+
+        public static bool operator ==(Alumno alumno, Alumno alumno2)
+        {
+            if (alumno._dni == alumno2._dni && alumno._legajo == alumno2._legajo)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public static bool operator !=(Alumno alumno, Alumno alumno2)
+        {
+            return !(alumno == alumno2);
+        }
+
+        public override bool Equals(object obj)
+        {
+            return (obj is Alumno);
+        }
     }
 }

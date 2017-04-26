@@ -75,12 +75,18 @@ namespace conHerencia
 
         public bool borrarPersona(Persona unaPersona)
         {
-            return true;
-        }
+            foreach (Persona item in this.ListadoDePersonas)
+            {
+                if (unaPersona is AlumnoEgresado)
+                {
+                    if (((AlumnoEgresado)unaPersona).Equals(item) && (AlumnoEgresado)unaPersona == (AlumnoEgresado)item)
+                    {
+                        this.ListadoDePersonas.Remove(item);
+                    }
+                }
+            }
 
-        public override bool Equals(object obj)
-        {
-            return base.Equals(obj);
+            return true;
         }
     }
 }
