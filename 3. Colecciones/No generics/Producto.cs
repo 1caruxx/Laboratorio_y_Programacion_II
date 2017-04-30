@@ -23,7 +23,6 @@ namespace No_generics
             this.descripcion = descripcion;
         }
 
-
         public void mostrar()
         {
             Console.WriteLine(this.descripcion);

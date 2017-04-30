@@ -10,12 +10,12 @@ namespace Entidades
     {
         private ESaborJugo _sabor;
 
-        public Jugo(int codigoBarra, EMarcaProducto marca, float precio, ESaborJugo sabor): base(codigoBarra, marca, precio)
+        public Jugo(int codigoDeBarra, EMarcaProducto marca, float precio , ESaborJugo sabor):base(codigoDeBarra , marca , precio)
         {
             this._sabor = sabor;
         }
 
-        public string mostrarJugo()
+        public string MostrarJugo()
         {
             StringBuilder SB = new StringBuilder();
 

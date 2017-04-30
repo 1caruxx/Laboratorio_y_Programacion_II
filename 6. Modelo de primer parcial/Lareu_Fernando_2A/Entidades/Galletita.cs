@@ -10,7 +10,7 @@ namespace Entidades
     {
         private float _peso;
 
-        public Galletita(int codigoBarra, EMarcaProducto marca, float precio, float peso): base(codigoBarra, marca, precio)
+        public Galletita(int codigoDeBarra, EMarcaProducto marca, float precio , float peso) : base(codigoDeBarra, marca, precio)
         {
             this._peso = peso;
         }

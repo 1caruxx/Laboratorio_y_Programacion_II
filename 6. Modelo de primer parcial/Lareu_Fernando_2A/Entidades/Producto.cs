@@ -8,8 +8,8 @@ namespace Entidades
 {
     public class Producto
     {
-        protected int _codigoBarra;
-        
+        protected int _codigoDeBarra;
+
         protected EMarcaProducto _marca;
         public EMarcaProducto marca
         {
@@ -22,9 +22,9 @@ namespace Entidades
             get { return this._precio; }
         }
 
-        public Producto(int codigoBarra, EMarcaProducto marca, float precio)
+        public Producto(int codigoDeBarra, EMarcaProducto marca, float precio)
         {
-            this._codigoBarra = codigoBarra;
+            this._codigoDeBarra = codigoDeBarra;
             this._marca = marca;
             this._precio = precio;
         }
@@ -33,16 +33,16 @@ namespace Entidades
         {
             StringBuilder SB = new StringBuilder();
 
+            SB.AppendLine("Codigo de barra: " + producto._codigoDeBarra);
             SB.AppendLine("Marca: " + producto._marca);
             SB.AppendLine("Precio: " + producto._precio);
-            SB.AppendLine("Codigo de barra: " + producto._codigoBarra);
 
             return SB.ToString();
         }
 
-        public static bool operator ==(Producto producto, Producto producto2)
+        public static bool operator ==(Producto producto , Producto producto2)
         {
-            return (producto._marca==producto2._marca && producto._codigoBarra==producto2._codigoBarra);
+            return (producto._codigoDeBarra == producto2._codigoDeBarra && producto._marca == producto2._marca);
         }
 
         public static bool operator !=(Producto producto, Producto producto2)
@@ -62,7 +62,7 @@ namespace Entidades
 
         public static explicit operator int(Producto producto)
         {
-            return producto._codigoBarra;
+            return producto._codigoDeBarra;
         }
     }
 }

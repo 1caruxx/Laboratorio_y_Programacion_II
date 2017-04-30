@@ -10,15 +10,18 @@ namespace Entidades
     {
         private float _litros;
 
-        public Gaseosa(int codigoBarra, EMarcaProducto marca, float precio , float litros):base(codigoBarra ,  marca ,  precio)
+        public Gaseosa(int codigoDeBarra, EMarcaProducto marca, float precio , float litros) : base(codigoDeBarra, marca, precio)
         {
             this._litros = litros;
         }
 
-        /*public Gaseosa(Producto producto, float litros): base(producto._codigoBarra)
+        public Gaseosa(Producto producto , float litros):this((int)producto , producto.marca , producto.precio , litros)
         {
-            this._litros = litros;
-        }*/
+            /*this._codigoDeBarra = (int)producto;
+            this._marca = producto.marca;
+            this._precio = producto.precio;
+            this._litros = litros;*/
+        }
 
         public string MostrarGaseosa()
         {
