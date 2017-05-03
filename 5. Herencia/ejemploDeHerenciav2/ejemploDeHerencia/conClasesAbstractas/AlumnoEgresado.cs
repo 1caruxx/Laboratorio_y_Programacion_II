@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace conClasesAbstractas
 {
-    public class Class1
+   public sealed class  AlumnoEgresado:Alumno
     {
     }
 }
