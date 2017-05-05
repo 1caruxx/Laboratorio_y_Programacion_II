@@ -16,8 +16,7 @@ namespace conClasesAbstractas
             this._nombre = nombre;
         }
 
+        //La terminacion de los metodos abstractos es el punto y coma (;) y no tienen implementacion en la clase abstracta, sin embargo, puedo crear metodos que no sean abstractos en una clase abstracta y que si tengan una implementacion.
         public abstract void mostrar();
-
-
     }
 }

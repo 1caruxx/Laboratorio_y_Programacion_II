@@ -19,7 +19,6 @@ namespace Proyecto_numero_2
             dato = Sello.imprimir();
             Sello.color = ConsoleColor.DarkRed;
             Sello.imprimirEnColor();
-
         }
     }
 }

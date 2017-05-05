@@ -22,9 +22,9 @@ namespace Proyecto_numero_2
         }
 
         public static void imprimirEnColor()
-       {
-        Console.ForegroundColor = Sello.color;
-        Console.WriteLine(Sello.mensaje);
-       }
+        {
+            Console.ForegroundColor = Sello.color;
+            Console.WriteLine(Sello.mensaje);
+        }
     }
 }

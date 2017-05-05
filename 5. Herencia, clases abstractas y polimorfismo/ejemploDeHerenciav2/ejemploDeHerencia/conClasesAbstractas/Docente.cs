@@ -8,7 +8,7 @@ namespace conClasesAbstractas
 {
     public class Docente:Empleado
     {
-        public Empleado(String nombre): base(nombre)
+        public Docente(String nombre): base(nombre)
         {
         }
 

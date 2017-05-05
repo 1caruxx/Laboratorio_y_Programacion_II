@@ -16,19 +16,19 @@ namespace Proyecto_numero_2
         /// <returns></returns>
         public static int retornarMayor(int numero1 , int numero2)
         {
-          int retorno=0;
+            int retorno=0;
 
-          if (numero1 > numero2)
-          {
-              retorno = numero1;
-          }
+            if (numero1 > numero2)
+            {
+                retorno = numero1;
+            }
 
-          else
-          {
-              retorno = numero2;
-          }
+            else
+            {
+                retorno = numero2;
+            }
 
-          return retorno;
+            return retorno;
         }
         /// <summary>
         /// Esto tiene que retornar el valor del medio
