@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Entidades;
+//using Ejemplo_interfaces_y_abstractas;
 
 namespace Test
 {
@@ -17,9 +18,18 @@ namespace Test
 
             uno = "nuevo";
 
-            uno = uno + new Auto("A3");
+            uno = uno + new Auto("A3" , 4);
 
-            uno = uno - new Auto("A3");
+            uno = uno + new Auto("A3", 4);
+
+            uno = uno + new Auto("A4", 4);
+
+            uno = uno + new Auto("A5", 4);
+
+            uno += new Moto("A3" , 4);
+
+            uno -= new Moto("A3", 4);
+            //uno = uno - new Auto("A3");
         }
     }
 }

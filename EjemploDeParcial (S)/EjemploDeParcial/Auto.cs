@@ -10,9 +10,19 @@ namespace Entidades
     {
         private int _cantidadDePuertas;
 
-        public Auto(string patente, int cantidadDePuertas): base(patente)
+        public Auto(string patente/*, DateTime fechaDeIngreso,*/, int cantidadDePuertas): base(patente/* , fechaDeIngreso*/)
         {
             this._cantidadDePuertas = cantidadDePuertas;
         }
+
+        public override bool Equals(object obj)
+        {
+            return (obj is Auto);
+        }
+
+       /* public override DateTime fechaDeIngreso
+        {
+            get { return this._fechaDeIngreso; }
+        }*/
     }
 }

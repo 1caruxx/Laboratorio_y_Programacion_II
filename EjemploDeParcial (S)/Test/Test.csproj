@@ -48,6 +48,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Ejemplo interfaces y abstractas\Ejemplo interfaces y abstractas.csproj">
+      <Project>{68744d77-833f-4e8c-ae62-197ee8667743}</Project>
+      <Name>Ejemplo interfaces y abstractas</Name>
+    </ProjectReference>
     <ProjectReference Include="..\EjemploDeParcial\Entidades.csproj">
       <Project>{4d3179fa-4107-464a-9def-6ca274c0d630}</Project>
       <Name>Entidades</Name>

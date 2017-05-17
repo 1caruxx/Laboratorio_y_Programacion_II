@@ -10,9 +10,20 @@ namespace Entidades
     {
         private int _cilindrada;
 
-        public Moto(string patente, int cilindrada): base(patente)
+        public Moto(string patente/* , DateTime fechaDeIngreso ,*/, int cilindrada): base(patente/* , fechaDeIngreso*/)
         {
             this._cilindrada = cilindrada;
         }
+
+        //El metodo equals se pregunta si el objeto pasado por parametro es del mismo tipo que la instancia de la cual es invocado.
+        public override bool Equals(object obj)
+        {
+            return (obj is Moto);
+        }
+
+        /*public override DateTime fechaDeIngreso
+        {
+            get { return this._fechaDeIngreso; }
+        }*/
     }
 }
