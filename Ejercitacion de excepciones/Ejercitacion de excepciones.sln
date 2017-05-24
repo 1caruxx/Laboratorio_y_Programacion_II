@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "Entidades\Entidades.csproj", "{A4A46E0E-9D0B-452E-B87D-03301BAEF18E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mis excepciones", "Mis excepciones\Mis excepciones.csproj", "{4414245A-8EEC-4892-BF80-6CB0BF9D540E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console Test", "Console Test\Console Test.csproj", "{2C44D9A0-7C8B-4CD2-BCF9-33D7AE340509}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A4A46E0E-9D0B-452E-B87D-03301BAEF18E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4A46E0E-9D0B-452E-B87D-03301BAEF18E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4A46E0E-9D0B-452E-B87D-03301BAEF18E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4A46E0E-9D0B-452E-B87D-03301BAEF18E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4414245A-8EEC-4892-BF80-6CB0BF9D540E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4414245A-8EEC-4892-BF80-6CB0BF9D540E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4414245A-8EEC-4892-BF80-6CB0BF9D540E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4414245A-8EEC-4892-BF80-6CB0BF9D540E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C44D9A0-7C8B-4CD2-BCF9-33D7AE340509}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C44D9A0-7C8B-4CD2-BCF9-33D7AE340509}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C44D9A0-7C8B-4CD2-BCF9-33D7AE340509}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C44D9A0-7C8B-4CD2-BCF9-33D7AE340509}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
