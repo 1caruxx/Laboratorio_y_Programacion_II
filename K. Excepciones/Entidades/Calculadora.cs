@@ -9,13 +9,9 @@ namespace Entidades
 {
     public class Calculadora
     {
-       
-
         //Esta funcion captura la excepcion lanzada por el metodo GenerarExcepcion() y lanza una nueva excepcion en el catch, concatenando la informacion de la excepcion de la excepcion que atrapo.
         public static void Calcular()
         {
-            /*int num1 = 0;
-            int resultado = num1/num1;*/
             Calculadora calculadora = new Calculadora();
 
             try
@@ -25,7 +21,6 @@ namespace Entidades
             catch(Exception ex)
             {
                 throw new Exception("Static calcular" + ex.Message+ex);
-                
             }
         }
 

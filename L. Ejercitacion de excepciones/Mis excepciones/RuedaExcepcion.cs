@@ -26,6 +26,5 @@ namespace Mis_excepciones
         {
             this.posicion = posicion;
         }
-
     }
 }

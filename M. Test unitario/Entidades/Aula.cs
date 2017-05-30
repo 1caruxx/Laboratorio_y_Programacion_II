@@ -59,6 +59,11 @@ namespace Entidades
             }
             else
             {
+                if(aula == alumno)
+                {
+                    throw new AlumnoRepetidoExcepcion();
+                }
+
                 throw new AulaLlenaExcepcion("El aula esta llena.");
             }
             

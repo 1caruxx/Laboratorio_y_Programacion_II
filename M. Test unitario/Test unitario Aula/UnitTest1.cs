@@ -26,9 +26,11 @@ namespace Test_unitario_Aula
         public void EspacioAulaIncorrecto()
         {
             Aula aulaGrande = new Aula(51);
-            if (aulaGrande.EspacioDisponible != 50)
+            if (aulaGrande.EspacioDisponible == 51)
+            {
                 Assert.Fail("Espacio disponible mal validado: {0}", aulaGrande.EspacioDisponible);
-            
+            }
+               
             Aula aulaChica = new Aula(0);
             Assert.AreNotEqual(aulaChica.EspacioDisponible , 0);
             
@@ -37,7 +39,7 @@ namespace Test_unitario_Aula
         }
 
         /// <summary>
-        ///
+        /// Verifica que los alumnos cargados ocupen correctamente el espacio.
         /// </summary>
         [TestMethod]
         public void AgregarAlumnoEspacioDisponible()
@@ -54,7 +56,7 @@ namespace Test_unitario_Aula
         }
 
         /// <summary>
-        ///
+        /// Verifica que la carga de alumnos no supere el limite de espacio.
         /// </summary>
         [TestMethod]
         public void AgregarAlumnoAulaLlena()
@@ -77,7 +79,7 @@ namespace Test_unitario_Aula
         }
 
         /// <summary>
-        ///
+        /// Verifica que un alumno haya sido agregado a la lista.
         /// </summary>
         [TestMethod]
         public void AgregarAlumnoVerDato()
@@ -95,7 +97,7 @@ namespace Test_unitario_Aula
         }
 
         /// <summary>
-        /// Se puede hacer tambnien con una propiedad que retornene nombre y legajo
+        /// Verifica que la cantidad de alumnos introducida sea correcta.
         /// </summary>
         [TestMethod]
         public void AgregarAlumnoMostrarCantidad()
@@ -117,17 +119,17 @@ namespace Test_unitario_Aula
         }
 
         /// <summary>
-        ///tarea: si el alumno ya esta cargado, debo lanzar una nueva excepciom (en el metodo + se lanza).
+        /// Verifica que el mismo alumno no se vuelva a cargar.
         /// </summary>
         [TestMethod]
         public void AgregarAlumnoRepetido()
         {
-            
             Aula miAula = new Aula(3);
             Alumno a1 = new Alumno("Martin", "555");
             Alumno a2 = new Alumno("Martin", "555");
 
             miAula += a1;
+
             try
             {
                 miAula += a2;
