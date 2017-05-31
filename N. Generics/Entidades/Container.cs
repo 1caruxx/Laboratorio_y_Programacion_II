@@ -63,10 +63,9 @@ namespace Entidades
             /*foreach (T item in this._elementos)
             {
                 yield return item;
-            }
-             */
+            }*/
+             
             return this._elementos.GetEnumerator();
-
         }
 
         System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
