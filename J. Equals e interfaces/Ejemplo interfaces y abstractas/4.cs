@@ -8,7 +8,7 @@ namespace Ejemplo_interfaces_y_abstractas
 {
     public class _4:_1,Iimprimible,Imostrable
     {
-        /*Solo puedo implementar los metodos y propiedades de las interfaces que este heredandon directamente.
+        /* Solo puedo implementar los metodos y propiedades de las interfaces que este heredando directamente.
          * Una clase padre hereda de la interfaz Iguardable, sin embargo no puedo implementar sus metodos o propiedades ya que esta clase no hereda esa interfaz
         */
         /*
