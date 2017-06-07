@@ -124,6 +124,7 @@ namespace Console_Test
          * Debere utilizar los siguientes namespaces ya que es necesario emplear la interfaz IFormatter y el tipo de dato BinaryFormatter: 
          *      System.Runtime.Serialization
          *      System.Runtime.Serialization.Formatters.Binary
+         * Por encima de la declaracion de la clase que vaya a serializar, debere escribir [Serialized] ya que si no dara como resultado una excepcion.
          * La extencion de estos archivos sera .bin (la mas usada) o .dat para reconocer que es un archivo binario.
          * En lugar de instanciar un escritor, simplemente declarare un Stream al que le asignare un FileStream.
          * Dentro del constructor de este FileStream le pasare como parametros:
@@ -135,8 +136,7 @@ namespace Console_Test
          */
         
         static void SerializarPersonaBinaria()
-        {
-            
+        { 
             Persona persona = new Persona("Lopez", "Natalia");
             IFormatter formateador = new BinaryFormatter();
 
@@ -185,7 +185,6 @@ namespace Console_Test
             try
             {
                 XmlSerializer serializador = new XmlSerializer(typeof(Aula));
-
 
                 using (StreamWriter escritor = new StreamWriter("aula.xml"))
                 {

@@ -16,6 +16,7 @@ namespace Entidades
 
         /*
          * Si yo quiero guardar en un archivo XML atributos que sean privados, debere previamente crear propiedades de lectura y escritura.
+         * Si estas propiedades son solo de lectura o solo de escritura, estos atributos no se guardaran.
          */
         public string Apellido
         {
@@ -29,6 +30,10 @@ namespace Entidades
             set { this._nombre = value; }
         }
 
+        /*
+         * El constructor por defecto es obligatorio ya que para guardarse la informacion de mi objeto en un archivo XML.
+         * primero se hace una copia de ese objeto y para ello es necesario un objeto que este vacio y reservado en memoria, la misma funcion que cumple un constructor por defecto.
+         */
         public Persona() { }
 
         public Persona(string apellido , string nombre)

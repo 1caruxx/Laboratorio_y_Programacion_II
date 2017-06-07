@@ -15,7 +15,7 @@ namespace EntidadesArchivos
          * Las expresiones regulares son textos que se interpretan como codigo, un ejemplo puede ser "\".
          *  -Para poder deshabilitar estas expresiones, utilizo un "\" o el "@" al principio del texto (deshabilita todas las expresiones del texto).
          */
-        private const string RUTA_ARCHIVO = "D:\\Lareu\\dato.txt";
+        private const string RUTA_ARCHIVO = "C:\\Lareu\\dato.txt";
 
         public static void Saludar()
         {
@@ -30,7 +30,7 @@ namespace EntidadesArchivos
            
             try
             {
-                //using (StreamWriter escritor = new StreamWriter(@"D:\Alumno\dato.txt))
+                //using (StreamWriter escritor = new StreamWriter(@"D:\Alumno\dato.txt)) (esta escritura de ruta tambien es valida, ya que aniadir el @ antes de las comillas deshabilitara todas las expresiones regulares de mi literal.
                 using (StreamWriter escritor = new StreamWriter(RUTA_ARCHIVO))
                 {
                     escritor.WriteLine("Bienvenido");
