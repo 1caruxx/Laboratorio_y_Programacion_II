@@ -16,14 +16,35 @@ namespace Console_Test
     {
         static void Main(string[] args)
         {
+            Aula aula1 = new Aula();
+            Aula aula2 = new Aula();
+            
+            Persona persona = new Persona();
+            Alumno alumno = new Alumno();
+            Profesor profesor = new Profesor();
+
+            persona.DNI = 4078;
+            alumno.Apellido = "Rodriguez";
+            alumno.Nombre = "javier";
+            alumno.Legajo = "434325";
+            aula1.Listado.Add(new Persona("Lopes", "Juan"));
+            aula1.Listado.Add(new Persona("Miguel", "Sanchez"));
+            aula1.Listado.Add(persona);
+       
+            aula1.Listado.Add(profesor);
+            aula1.Listado.Add(alumno);
+            
             try
             {
-                Program.Saludar();
+                /*Program.Saludar();
                 AdministradorDeArchivos.Saludar();
                 Program.SerializarPersonaXML();
                 Program.DesSerializarPersonaXML();
                 Program.SerializarPersonaBinaria();
-                Program.DesSerializarPersonaBinaria();
+                Program.DesSerializarPersonaBinaria();*/
+                Program.SerializarAula(aula1);
+                aula1.Serializar();
+                aula2.DesSerializar();
             }
             catch (Exception ex)
             {
@@ -46,10 +67,11 @@ namespace Console_Test
 
         static void SerializarPersonaXML()
         {
-            Persona persona = new Persona();
+            Persona persona = new Persona("Gomez", "Franco");
 
             /*
              * El tipo de dato XmlSerializer posee los metodos necesario para serializar o desserializar un objeto, es decir, traducir sus datos a lenguaje XML.
+             * Debere emplear el namespace System.Xml.Serialization
              * En su constructor le pasare como parametro el tipo de el objeto que quiero serializar.
              * Finalmente a traves del metodo .Serialize() serializare la informacion que contenga mi objeto, es decir, la traducire al lenguaje XML.
              *      - Para ello, le pasare como parametros la instanciacion de mi escritor y de mi objeto.
@@ -57,9 +79,6 @@ namespace Console_Test
              * Si los atributos de mi objeto no son publicos, no podre verlos en el archivo fisico.
              */
             XmlSerializer serializador = new XmlSerializer(typeof(Persona));
-
-            persona.apellido = "Gomez";
-            persona.nombre = "Franco";
 
             try
             {
@@ -90,8 +109,8 @@ namespace Console_Test
                 using (StreamReader lector = new StreamReader("Persona.xml"))
                 {
                     persona= (Persona)serializador.Deserialize(lector);
-                    Console.WriteLine(persona.apellido);
-                    Console.WriteLine(persona.nombre);
+                    Console.WriteLine(persona.Apellido);
+                    Console.WriteLine(persona.Nombre);
                 }
             }
             catch (Exception ex)
@@ -118,11 +137,8 @@ namespace Console_Test
         static void SerializarPersonaBinaria()
         {
             
-            Persona persona = new Persona();
+            Persona persona = new Persona("Lopez", "Natalia");
             IFormatter formateador = new BinaryFormatter();
-
-            persona.apellido = "Lopez";
-            persona.nombre = "Natalia";
 
             try
             {
@@ -154,14 +170,36 @@ namespace Console_Test
                     Persona persona =(Persona)formateador.Deserialize(archivo);
 
                     Console.WriteLine("Desserializacion Binaria:");
-                    Console.WriteLine(persona.nombre);
-                    Console.WriteLine(persona.apellido);
+                    Console.WriteLine(persona.Nombre);
+                    Console.WriteLine(persona.Apellido);
                 }
             }
             catch (Exception ex)
             {
                 throw ex;
             }
+        }
+
+        static bool SerializarAula(Aula aula)
+        {
+            try
+            {
+                XmlSerializer serializador = new XmlSerializer(typeof(Aula));
+
+
+                using (StreamWriter escritor = new StreamWriter("aula.xml"))
+                {
+                    serializador.Serialize(escritor, aula);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Excepcion en el metodo serializaraula");
+                Console.WriteLine(ex.Message);
+                return false;
+            }
+
+            return true;
         }
     }
 }

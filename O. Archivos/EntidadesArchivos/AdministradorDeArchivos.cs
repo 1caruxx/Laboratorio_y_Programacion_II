@@ -15,7 +15,7 @@ namespace EntidadesArchivos
          * Las expresiones regulares son textos que se interpretan como codigo, un ejemplo puede ser "\".
          *  -Para poder deshabilitar estas expresiones, utilizo un "\" o el "@" al principio del texto (deshabilita todas las expresiones del texto).
          */
-        private const string RUTA_ARCHIVO = "C:\\Lareu\\dato.txt";
+        private const string RUTA_ARCHIVO = "D:\\Lareu\\dato.txt";
 
         public static void Saludar()
         {
@@ -60,7 +60,6 @@ namespace EntidadesArchivos
             {
                 throw ex;
             }
-
         }
     }
 }
