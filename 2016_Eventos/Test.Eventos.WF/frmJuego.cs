@@ -66,6 +66,7 @@ namespace Test.Eventos.WF
             this._juego.Ganar += new JuegoGanado(Ganaste);
             this._juego.Perder += new JuegoPerdido(Perdiste);
             this._juego.Segir += new JuegoContinua(SeguiParticipando);
+            this._juego.Proximo += new Proximidad(ProximoAGanar);
         }
 
         private void Inicializar()
@@ -79,6 +80,7 @@ namespace Test.Eventos.WF
 
             //INICIALIZO LA CANTIDAD DE INTENTOS REALIZADOS
             this.lblIntentos.Text = "Intentos " + this._juego.CantidadIntentos;
+
         }
 
         private void txtNumero_KeyDown(object sender, KeyEventArgs e)
@@ -96,7 +98,8 @@ namespace Test.Eventos.WF
 
         private void ProximoAGanar(int dato)
         {
- 
+            //this.lblPista.Text = "Te queda un:" + dato + "%";
+            this.lblPista.Text = "Estas a " + dato + " numeros de distancia";
         }
 
         private void Ganaste(object obj, EventArgs e)
@@ -104,6 +107,7 @@ namespace Test.Eventos.WF
             this.lblIntentos.Text = "Intentos " + this._juego.CantidadIntentos + " / " + this._juego.CantidadMaximaDeIntentos;
             this._cantidadExitos++;
             this.lblCantExitos.Text = this._cantidadExitos.ToString();
+            this.lblPista.Text = "Pista:";
 
             if (MessageBox.Show("Ganaste!!\nOtro??", "Exito", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
             {
@@ -138,7 +142,7 @@ namespace Test.Eventos.WF
         {
             this.lblIntentos.Text = "Intentos " + this._juego.CantidadIntentos + " / " + this._juego.CantidadMaximaDeIntentos;
 
-            MessageBox.Show("Uno más!!" + this._juego.Pista);
+            MessageBox.Show("Uno más!!");
         }
 
         #endregion

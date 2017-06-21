@@ -40,6 +40,7 @@
             this.lblCantExitos = new System.Windows.Forms.Label();
             this.lblCantFracasos = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.lblPista = new System.Windows.Forms.Label();
             this.miPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -98,6 +99,7 @@
             // 
             // miPanel
             // 
+            this.miPanel.Controls.Add(this.lblPista);
             this.miPanel.Controls.Add(this.lblNumero);
             this.miPanel.Controls.Add(this.txtNumero);
             this.miPanel.Controls.Add(this.lblIntentos);
@@ -158,6 +160,15 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // lblPista
+            // 
+            this.lblPista.AutoSize = true;
+            this.lblPista.Location = new System.Drawing.Point(145, 67);
+            this.lblPista.Name = "lblPista";
+            this.lblPista.Size = new System.Drawing.Size(30, 13);
+            this.lblPista.TabIndex = 6;
+            this.lblPista.Text = "&Pista";
+            // 
             // frmJuego
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -196,6 +207,7 @@
         private System.Windows.Forms.Label lblCantExitos;
         private System.Windows.Forms.Label lblCantFracasos;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Label lblPista;
     }
 }
 

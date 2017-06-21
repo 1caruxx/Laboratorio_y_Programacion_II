@@ -35,7 +35,8 @@ namespace Entidades.Eventos
             { 
                 this._numero = value;
                 this._cantidadIntentos++;
-                this.AdministrarJugada();               
+                this.AdministrarJugada();
+                this.MetodoDeProximidad();
             }
         }
 
@@ -55,10 +56,10 @@ namespace Entidades.Eventos
             {
                 string pista = "";
 
-                if (Math.Abs(this._numero - this._numeroSecreto) < 10)
+                /*if (Math.Abs(this._numero - this._numeroSecreto) < 10)
                 {
                     this.Proximo(10);
-                }
+                }*/
 
                 if (this._numero > this._numeroSecreto)
                 {
@@ -87,6 +88,20 @@ namespace Entidades.Eventos
         static Juego() 
         {
             Juego._generadorDeNumeros = new Random();
+        }
+
+        private void MetodoDeProximidad()
+        {
+            /*if (Math.Abs(this._numero - this._numeroSecreto) < 10)
+            {
+                this.Proximo(10);
+            }*/
+
+            if(this._numero != this._numeroSecreto)
+            {
+                this.Proximo(Math.Abs(this._numero - this._numeroSecreto));
+            }
+
         }
 
         public Juego(EDificultad dificultad)
