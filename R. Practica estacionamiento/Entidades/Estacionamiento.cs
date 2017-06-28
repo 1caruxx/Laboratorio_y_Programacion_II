@@ -9,12 +9,19 @@ using Interfaces;
 
 namespace Entidades
 {
+    //public delegate void SinEspacio();
     [Serializable]
     public class Estacionamiento
     {
+        public delegate void Delegado();
         private string _nombre;
         private int _capacidad;
         private List<Vehiculo> _listado;
+        public event Delegado evento_1;
+        public event Delegado evento_2;
+        public event Delegado evento_3;
+
+        #region Propiedades
 
         public List<Vehiculo> Listado
         {
@@ -35,6 +42,8 @@ namespace Entidades
         {
             get { return this._capacidad; }
         }
+
+        #endregion
 
         #region Constructores
 
@@ -145,6 +154,28 @@ namespace Entidades
             archivo.Cargar(out estacionamiento, ruta);
         }
 
+        public void DisparadorDeEventos()
+        {
+            if(this._listado.Count == this._capacidad)
+            {
+                this.evento_1();
+            }
+            else
+            {
+                if(this._listado.Count == 1)
+                {
+                    this.evento_2();
+                }
+                else
+                {
+                    if(this._listado.Count == 0)
+                    {
+                        this.evento_3();
+                    }
+                }
+            }
+        }
+
         #endregion
 
         #region Sobrecarga de operadores
@@ -182,6 +213,7 @@ namespace Entidades
                 else
                 {
                     estacionamiento._listado.Add(vehiculo);
+                    estacionamiento.DisparadorDeEventos();
                 }
             }
 
