@@ -48,15 +48,17 @@ namespace Pelotita_Con_Threads
 
         private void AsignarNumero(string texto)
         {
-            //devuelve true si los hilos son distintos
+            //Devuelve true si los hilos son distintos.
             //Como este metodo es llamado por el metodo Hacer() ejecutado en un hilo diferente, ejecutara las sentencias.
+            //Es importante que este dentro de un try y un catch, ya que al cerrar el programa arrojara una excepcion. Esto se debe a que mi segundo hilo esta colocando informacion en alguna parte de mi hilo priuncipal.
+            //Cuando cierro la venta, el hilo secundario intentara insertar informacion en el hilo principal que ya fue cerrado y como resultado lanza la excepcion.
             try
             {
                 if (this.lblNumero.InvokeRequired)
                 {
                     AsignarNumeroDelegado delegado = new AsignarNumeroDelegado(this.AsignarNumero);
                     //Este comando se encarga de invocar un delegado, llamare devuelta a este metodo, AsignarNumero() pero estando dentro del mismo hilo.
-                    //Como entro por segunda vez a este metodo por el hilo que yo cree, entrara al else y le asignara al level los numeros que le pase por parametro al metodo AsignarNumero().
+                    //Como entro por segunda vez a este metodo por el hilo que yo cree, entrara al else y le asignara al label los numeros que le pase por parametro al metodo AsignarNumero().
                     this.Invoke(delegado, new Object[] { texto });
                 }
                 else
