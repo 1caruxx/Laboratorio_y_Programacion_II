@@ -10,17 +10,18 @@ namespace Console_Test
 {
     class Program
     {
-
         static void Main(string[] args)
         {
             Alumno alumno = new Alumno("Fernando", 19, 3, false);
             int numero = 4;
+            int cantidadDeVocales = "Fernando".CantidaDeVocales();
 
             Console.WriteLine(alumno.MostrarDatos());
 
             alumno.SetLegajo(numero);
 
             Console.WriteLine(alumno.Legajo);
+            Console.WriteLine("Cantidad de vovales de mi nombre: " + cantidadDeVocales);
 
             Console.WriteLine("Presione una tecla para finalizar...");
             Console.ReadKey();
@@ -40,7 +41,7 @@ namespace Console_Test
 
             foreach (char item in dato)
             {
-                if (item == 2)
+                if (item == 97 ||item == 101 ||item == 105 ||item == 111 ||item == 117 ||item == 65 ||item == 69 ||item == 73 || item == 79 ||item == 85)
                 {
                     cantidad++;
                 }
