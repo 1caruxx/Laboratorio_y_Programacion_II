@@ -1,4 +1,4 @@
-# Programacion II
+# Laboratorio y Programacion II
 
 Este repositorio contiene todos los ejercicios hechos en clase a lo largo de la cursada de laboratorio y programacion II.
 
