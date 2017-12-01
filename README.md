@@ -18,6 +18,7 @@ Los lenguajes tratados fueron:
 * Herencia y clases abstractas
 * Polimorfismo
 * Interfaces
+* Manipulacion de excepciones
 * Tests unitarios
 * Archivos de texto, binarios y serializacion y descerializacion XML
 * Eventos
